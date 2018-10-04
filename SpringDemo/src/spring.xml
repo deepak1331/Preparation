@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="triangle" class="com.shapes.Triangle" name="triangle-name">
+
+		<!-- using argument type in consideration -->
+		<!-- <constructor-arg type="java.lang.String" value="Right Angle" /> -->
+		<!-- <constructor-arg type="int" value="13" /> -->
+
+		<!--Initializing class using Constructor BY type...Need to tc of the arguments 
+			sequence -->
+		<constructor-arg value="Right Angle" />
+		<constructor-arg value="13" />
+
+
+		<!-- Arguments can be passed in any sequence, here index matters -->
+		<!-- <constructor-arg index="0" value="Right Angle" /> -->
+		<!-- <constructor-arg index="1" value="13" /> -->
+
+	</bean>
+	
+	<alias name="triangle" alias="triangle-alias"/>
+
+	<bean id="rect" class="com.shapes.Rectangle">
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="zeroPoint" />
+		<property name="pointC" ref="pointC" />
+		<property name="pointD" ref="pointD" />
+	</bean>
+
+	<bean id="pointA" class="com.shapes.Point">
+		<property name="x" value="0" />
+		<property name="y" value="20" />
+	</bean>
+	<bean id="zeroPoint" class="com.shapes.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointC" class="com.shapes.Point">
+		<property name="x" value="10" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean id="pointD" class="com.shapes.Point">
+		<property name="x" value="10" />
+		<property name="y" value="20" />
+	</bean>
+
+
+	<bean id="square" class="com.shapes.Square">
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint" />
+
+				<bean class="com.shapes.Point">
+					<constructor-arg value="0" />
+					<constructor-arg value="20" />
+				</bean>
+
+				<bean class="com.shapes.Point">
+					<property name="x" value="20" />
+					<property name="y" value="20" />
+				</bean>
+
+
+				<bean class="com.shapes.Point">
+					<constructor-arg index="1" value="0" />
+					<constructor-arg index="0" value="20" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+</beans>

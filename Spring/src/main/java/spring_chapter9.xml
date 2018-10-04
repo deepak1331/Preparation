@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle" class="Shapes.Chapter9.Triangle">
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint"></ref>
+				<ref bean="pointB"></ref>
+				<ref bean="pointC"></ref>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="zeroPoint" class="Shapes.Chapter9.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="pointB" class="Shapes.Chapter9.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="10"></property>
+	</bean>
+	<bean id="pointC" class="Shapes.Chapter9.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="0"></property>
+	</bean>
+</beans>

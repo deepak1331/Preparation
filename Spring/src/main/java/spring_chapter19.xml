@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<bean id="pointA" class="Shapes.Chapter19.Point">
+		<qualifier value="circle_related" />
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="pointB" class="Shapes.Chapter19.Point">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="pointC" class="Shapes.Chapter19.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="circle" class="Shapes.Chapter19.Circle">
+	</bean>
+
+	<bean id="polygon" class="Shapes.Chapter19.Polygon">
+	</bean>
+
+	<bean id="triangle" class="Shapes.Chapter19.Triangle" autowire="byName">
+	</bean>
+</beans>

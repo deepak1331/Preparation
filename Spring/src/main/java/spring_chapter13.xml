@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- ************ Context Aware, and Bean Name Aware ************* -->
+	<bean id="parentTriangle" class="Shapes.Chapter13.Triangle">
+		<property name="pointA" ref="pointA"></property>
+	</bean>
+
+	<bean id="triangle1" class="Shapes.Chapter13.Triangle" parent="parentTriangle">
+		<property name="pointB" ref="pointB"></property>
+		<property name="pointC" ref="pointC"></property>
+	</bean>
+
+	<bean id="triangle2" class="Shapes.Chapter13.Triangle" parent="parentTriangle">
+		<property name="pointB" ref="pointB"></property>
+	</bean>
+	<bean id="pointA" class="Shapes.Chapter13.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="pointB" class="Shapes.Chapter13.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="30"></property>
+	</bean>
+
+	<bean id="pointC" class="Shapes.Chapter13.Point">
+		<property name="x" value="30"></property>
+		<property name="y" value="20"></property>
+	</bean>
+
+	<bean id="parentPolygon" class="Shapes.Chapter13.Polygon">
+		<property name="points">
+			<list>
+				<ref bean="pointA" />
+				<ref bean="pointB" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Object can not be created for this, as its defined as abstract class, 
+		can be used for templating though -->
+	<bean id="parentPolygon2" class="Shapes.Chapter13.Polygon"
+		abstract="true">
+		<property name="points">
+			<list>
+				<ref bean="pointA" />
+				<ref bean="pointB" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- ParentPolygon objects are over written by child objct -->
+	<bean id="polygon1" class="Shapes.Chapter13.Polygon" parent="parentPolygon">
+		<property name="points">
+			<list>
+				<ref bean="pointC" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="polygon2" class="Shapes.Chapter13.Polygon" parent="parentPolygon">
+		<property name="points">
+			<list merge="true">
+				<ref bean="pointC" />
+			</list>
+		</property>
+	</bean>
+
+
+</beans>

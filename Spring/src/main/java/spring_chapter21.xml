@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="pointA" class="Shapes.Chapter21.Point">
+		<qualifier value="circle_related" />
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="pointB" class="Shapes.Chapter21.Point">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="pointC" class="Shapes.Chapter21.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<!-- @Component annotation enable us to remove the Circle definition from 
+		bean -->
+	<!-- <bean id="circle" class="Shapes.Chapter21.Circle"> -->
+	<!-- </bean> -->
+
+<!-- 	<bean id="triangle" class="Shapes.Chapter21.Triangle" autowire="byName"> -->
+<!-- 	</bean> -->
+
+
+	<context:annotation-config />
+
+	<!-- Asks Spring to scan the code for component classes, base-package tells -->
+	<!-- Spring to look into the package it need to look into -->
+	<context:component-scan base-package="Shapes.Chapter21" />
+</beans>

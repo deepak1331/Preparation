@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="Triangle_Property" class="com.package1.Triangle">
+		<property name="type" value="Equilateral" />
+		<property name="height" value="15" />
+	</bean>
+	
+	<bean id="Circle" class="com.package1.Circle" />
+</beans>

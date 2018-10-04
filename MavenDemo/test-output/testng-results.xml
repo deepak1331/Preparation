@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestNgDemo" duration-ms="70" started-at="2018-01-03T22:16:27Z" finished-at="2018-01-03T22:16:27Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="70" started-at="2018-01-03T22:16:27Z" finished-at="2018-01-03T22:16:27Z">
+      <class name="DeepakMaven.MavenDemo.TestEmployee">
+        <test-method status="PASS" signature="testcalculateAppraisalAmount()[pri:0, instance:DeepakMaven.MavenDemo.TestEmployee@573f2bb1]" name="testcalculateAppraisalAmount" duration-ms="4" started-at="2018-01-04T03:46:27Z" finished-at="2018-01-04T03:46:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcalculateAppraisalAmount -->
+      </class> <!-- DeepakMaven.MavenDemo.TestEmployee -->
+      <class name="DeepakMaven.MavenDemo.TestDemo1">
+        <test-method status="PASS" signature="checkString()[pri:0, instance:DeepakMaven.MavenDemo.TestDemo1@7c0e2abd]" name="checkString" duration-ms="18" started-at="2018-01-04T03:46:27Z" finished-at="2018-01-04T03:46:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkString -->
+      </class> <!-- DeepakMaven.MavenDemo.TestDemo1 -->
+    </test> <!-- Test -->
+  </suite> <!-- TestNgDemo -->
+</testng-results>

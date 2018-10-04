@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle1" class="Shapes.Chapter6.Triangle">
+		<constructor-arg type="java.lang.String" value="Right Angle" />
+	</bean>
+	
+	<bean id="triangle2" class="Shapes.Chapter6.Triangle">
+		<constructor-arg type ="int" value="100" />
+	</bean>
+
+	<bean id="triangle3" class="Shapes.Chapter6.Triangle">
+		<constructor-arg value="Equilateral" />
+		<constructor-arg value="20" />
+	</bean>
+	
+	<bean id="triangle4" class="Shapes.Chapter6.Triangle">	
+		<constructor-arg index="1" value="20" />
+		<constructor-arg index="0"  value="Equilateral" />
+	</bean>
+	
+</beans>

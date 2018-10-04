@@ -1,0 +1,10 @@
+{
+	"source": "adstats-publisher",
+	"fields": [
+		"day", "adUnit", "impressions", "netRevenue"
+	],
+	"range": {
+		"fromDate": "2018-02-10",
+		"toDate": "2018-02-10"
+	}
+}

@@ -1,0 +1,8 @@
+AthenaSimba\AthenaSimbatest\CommonUtil.class
+AthenaSimba\AthenaSimbatest\Sales.class
+AthenaSimba\AthenaSimbatest\RedShiftDBQueries.class
+AthenaSimba\AthenaSimbatest\App.class
+AthenaSimba\AthenaSimbatest\ErrorInfo.class
+AthenaSimba\AthenaSimbatest\AthenaDBManager.class
+AthenaSimba\AthenaSimbatest\RedShiftDBManager.class
+AthenaSimba\AthenaSimbatest\SalesEtlUtil.class

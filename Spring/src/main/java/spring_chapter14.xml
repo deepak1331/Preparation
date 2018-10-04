@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-init-method="myInit" default-destroy-method="cleanUp">
+	<bean id="triangle1" class="Shapes.Chapter14.Triangle">
+		<property name="pointA" ref="zeroPoint"></property>
+		<property name="pointB" ref="point2"></property>
+		<property name="pointC" ref="point3"></property>
+	</bean>
+
+	<bean id="zeroPoint" class="Shapes.Chapter14.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="point2" class="Shapes.Chapter14.Point">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="point3" class="Shapes.Chapter14.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean id="polygon" class="Shapes.Chapter14.Polygon" init-method="myInit"
+		destroy-method="cleanUp">
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint" />
+				<ref bean="point2" />
+				<ref bean="point3" />
+			</list>
+		</property>
+	</bean>
+</beans>
